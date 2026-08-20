@@ -140,11 +140,11 @@ function generateContactoPage() {
                             <ul class="space-y-2 bg-white/10 p-4 rounded-lg">
                                 <li class="flex justify-between">
                                     <span>Lunes - Viernes:</span>
-                                    <span class="font-semibold">8:00 AM - 6:00 PM</span>
+                                    <span class="font-semibold">09:00 AM - 05:00 PM</span>
                                 </li>
                                 <li class="flex justify-between">
                                     <span>Sábados:</span>
-                                    <span class="font-semibold">9:00 AM - 1:00 PM</span>
+                                    <span class="font-semibold">09:00 AM - 12:00 PM</span>
                                 </li>
                                 <li class="flex justify-between">
                                     <span>Emergencias:</span>

@@ -71,91 +71,91 @@ function generateBlogPage() {
                 </section>
 
                 <!-- SECCIÓN SELLOS INSTITUCIONALES -->
-<section id="sellos-institucionales" class="py-14 sm:py-16 bg-white border-t border-b border-gray-100">
+                <section id="sellos-institucionales" class="py-14 sm:py-16 bg-white border-t border-b border-gray-100">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Texto institucional -->
-        <div class="text-center mb-10">
+                        <!-- Texto institucional -->
+                        <div class="text-center mb-10">
 
-            <span class="text-sm sm:text-base font-semibold text-secondary-green uppercase tracking-wider">
-                Formalidad y Respaldo Institucional
-            </span>
+                            <span class="text-sm sm:text-base font-semibold text-secondary-green uppercase tracking-wider">
+                                Formalidad y Respaldo Institucional
+                            </span>
 
-            <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-primary-blue">
-                Una empresa formal y habilitada para operar
-            </h2>
+                            <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-primary-blue">
+                                Una empresa formal y habilitada para operar
+                            </h2>
 
-            <p class="mt-3 max-w-3xl mx-auto text-gray-600 leading-relaxed">
-                AS-Teje Servicios opera bajo los requisitos establecidos para la
-                prestación formal de sus servicios, brindando a nuestros clientes
-                mayor seguridad, transparencia y confianza en cada relación comercial.
-            </p>
+                            <p class="mt-3 max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                                AS-Teje Servicios opera bajo los requisitos establecidos para la
+                                prestación formal de sus servicios, brindando a nuestros clientes
+                                mayor seguridad, transparencia y confianza en cada relación comercial.
+                            </p>
 
-        </div>
-
-
-        <!-- SELLOS -->
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-20">
-
-            <!-- SELLO 1: DGII -->
-            <div class="group flex flex-col items-center justify-center
-                        w-full sm:w-72 min-h-40
-                        p-6 rounded-2xl
-                        bg-bg-light border border-gray-100
-                        shadow-sm hover:shadow-md
-                        transition-all duration-300">
-
-                <img
-                    src="imgs/Icono Facturador.png"
-                    alt="AS-Teje Servicios - Facturador Electrónico autorizado por la DGII"
-                    class="max-w-[220px] max-h-24 w-auto h-auto object-contain
-                           opacity-90 group-hover:opacity-100
-                           group-hover:scale-105
-                           transition-all duration-300">
-
-                <p class="mt-4 text-sm font-semibold text-primary-blue text-center">
-                    Facturador Electrónico
-                </p>
-
-                <span class="text-xs text-gray-500 text-center mt-1">
-                    Autorizado por la DGII
-                </span>
-
-            </div>
+                        </div>
 
 
-            <!-- SELLO 2: PROVEEDOR DEL ESTADO -->
-            <div class="group flex flex-col items-center justify-center
-                        w-full sm:w-72 min-h-40
-                        p-6 rounded-2xl
-                        bg-bg-light border border-gray-100
-                        shadow-sm hover:shadow-md
-                        transition-all duration-300">
+                        <!-- SELLOS -->
+                        <div class="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-20">
 
-                <img
-                    src="imgs/logo_dgcp_completo.png"
-                    alt="AS-Teje Servicios - Proveedor del Estado"
-                    class="max-w-[220px] max-h-24 w-auto h-auto object-contain
-                           opacity-90 group-hover:opacity-100
-                           group-hover:scale-105
-                           transition-all duration-300">
+                            <!-- SELLO 1: DGII -->
+                            <div class="group flex flex-col items-center justify-center
+                                        w-full sm:w-72 min-h-40
+                                        p-6 rounded-2xl
+                                        bg-bg-light border border-gray-100
+                                        shadow-sm hover:shadow-md
+                                        transition-all duration-300">
 
-                <p class="mt-4 text-sm font-semibold text-primary-blue text-center">
-                    Proveedor del Estado
-                </p>
+                                <img
+                                    src="imgs/Icono Facturador.png"
+                                    alt="AS-Teje Servicios - Facturador Electrónico autorizado por la DGII"
+                                    class="max-w-[220px] max-h-24 w-auto h-auto object-contain
+                                        opacity-90 group-hover:opacity-100
+                                        group-hover:scale-105
+                                        transition-all duration-300">
 
-                <span class="text-xs text-gray-500 text-center mt-1">
-                    Empresa habilitada para contratar con el Estado
-                </span>
+                                <p class="mt-4 text-sm font-semibold text-primary-blue text-center">
+                                    Facturador Electrónico
+                                </p>
 
-            </div>
+                                <span class="text-xs text-gray-500 text-center mt-1">
+                                    Autorizado por la DGII
+                                </span>
 
-        </div>
+                            </div>
 
-    </div>
 
-</section>
+                            <!-- SELLO 2: PROVEEDOR DEL ESTADO -->
+                            <div class="group flex flex-col items-center justify-center
+                                        w-full sm:w-72 min-h-40
+                                        p-6 rounded-2xl
+                                        bg-bg-light border border-gray-100
+                                        shadow-sm hover:shadow-md
+                                        transition-all duration-300">
+
+                                <img
+                                    src="imgs/logo_dgcp_completo.png"
+                                    alt="AS-Teje Servicios - Proveedor del Estado"
+                                    class="max-w-[220px] max-h-24 w-auto h-auto object-contain
+                                        opacity-90 group-hover:opacity-100
+                                        group-hover:scale-105
+                                        transition-all duration-300">
+
+                                <p class="mt-4 text-sm font-semibold text-primary-blue text-center">
+                                    Proveedor del Estado
+                                </p>
+
+                                <span class="text-xs text-gray-500 text-center mt-1">
+                                    Empresa habilitada para contratar con el Estado
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
                 <!-- Logos de Clientes 
                 <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 mt-10">
@@ -189,7 +189,9 @@ function generateBlogPage() {
             </div>
         </section>
 
-        <!-- 2. SECCIÓN BLOG -->
+
+
+        <!-- 2. SECCIÓN BLOG 
         <section class="py-16 sm:py-24 bg-bg-light border-t border-b fade-in" id="blog-content">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
@@ -197,9 +199,12 @@ function generateBlogPage() {
                     <p class="mt-4 text-xl text-gray-600">Contenido experto para clientes que buscan soluciones y conocimiento.</p>
                 </div>
 
-                <!-- Artículos de Blog -->
+                 Artículos de Blog 
+
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Artículo 1: Termitas -->
+
+                     Artículo 1: Termitas 
+                     
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/a8e063/1a3263?text=Termitas" alt="Control de Termitas" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -215,7 +220,8 @@ function generateBlogPage() {
                         </div>
                     </div>
                     
-                    <!-- Artículo 2: Seguridad/Certificaciones -->
+                     Artículo 2: Seguridad/Certificaciones 
+                     
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/1a3263/a8e063?text=Normativas" alt="Normativas de Fumigación" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -231,7 +237,8 @@ function generateBlogPage() {
                         </div>
                     </div>
 
-                    <!-- Artículo 3: Productos/Equipos -->
+                     Artículo 3: Productos/Equipos 
+                    
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/ff7e5f/1a3263?text=EPP" alt="Suministros de Seguridad" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -247,7 +254,8 @@ function generateBlogPage() {
                         </div>
                     </div>
 
-                    <!-- Artículo 4: Tendencias -->
+                     Artículo 4: Tendencias 
+                     
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/1a3263/ff7e5f?text=Tendencias" alt="Tendencias del Sector" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -263,7 +271,8 @@ function generateBlogPage() {
                         </div>
                     </div>
 
-                    <!-- Artículo 5: Caso de Éxito -->
+                     Artículo 5: Caso de Éxito 
+                     
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/a8e063/1a3263?text=Caso+Exito" alt="Caso de Éxito" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -279,7 +288,8 @@ function generateBlogPage() {
                         </div>
                     </div>
 
-                    <!-- Artículo 6: Normativas -->
+                     Artículo 6: Normativas 
+                     
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                         <img src="https://placehold.co/600x400/ff7e5f/1a3263?text=Legislacion" alt="Legislación Ambiental" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -296,7 +306,8 @@ function generateBlogPage() {
                     </div>
                 </div>
                 
-                <!-- CTA para suscripción al blog -->
+                 CTA para suscripción al blog 
+                 
                 <div class="mt-16 bg-primary-blue p-8 rounded-2xl shadow-xl text-center text-white">
                     <h3 class="text-2xl font-bold mb-4">¿Quiere mantenerse actualizado sobre control de plagas?</h3>
                     <p class="mb-6">Suscríbase a nuestro boletín y reciba información técnica y normativas actualizadas.</p>
@@ -309,5 +320,7 @@ function generateBlogPage() {
 
             </div>
         </section>
+        
+        -->
     `;
 }
