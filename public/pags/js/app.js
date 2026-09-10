@@ -1,45 +1,146 @@
 // Estado global de la aplicación
 let currentPage = 'home';
 
-// Configuración de rutas
+// Configuración de rutas (soporta alias 'nosotros' y 'blog')
 const routes = {
     'home': generateHomePage,
     'servicios': generateServiciosPage,
     'cotizador': generateCotizadorPage,
     'productos': generateProductosPage,
     'alquiler': generateAlquilerPage,
+    'nosotros': generateBlogPage,
     'blog': generateBlogPage,
     'contacto': generateContactoPage
 };
 
+// Títulos SEO dinámicos por sección
+const pageTitles = {
+    'home': 'AS-Teje Servicios | Control de Plagas Especializado',
+    'servicios': 'Servicios Especializados | AS-Teje Servicios',
+    'cotizador': 'Cotizador en Línea V2.0 | AS-Teje Servicios',
+    'productos': 'Venta de Productos e Insumos Industriales | AS-Teje Servicios',
+    'alquiler': 'Renta de Equipos de Fumigación | AS-Teje Servicios',
+    'nosotros': 'Nosotros, Trayectoria y Respaldo Institucional | AS-Teje Servicios',
+    'blog': 'Nosotros, Trayectoria y Respaldo Institucional | AS-Teje Servicios',
+    'contacto': 'Contacto Directo y Emergencias | AS-Teje Servicios'
+};
+
 // Configuración de eventos dinámicos
 function attachDynamicEvents() {
-    // Cotizador
+    // 1. Cotizador
     if (currentPage === 'cotizador') {
         const calcBtn = document.getElementById('cotizar-btn');
+        const areaInput = document.getElementById('area');
+        const servicioSelect = document.getElementById('servicio-tipo');
+        const frecuenciaSelect = document.getElementById('frecuencia');
+        const tipoClienteSelect = document.getElementById('tipo-cliente');
+
         if (calcBtn) {
             calcBtn.addEventListener('click', calcularCotizacion);
+        }
+        if (areaInput) {
+            areaInput.addEventListener('input', calcularCotizacion);
+        }
+        if (servicioSelect) {
+            servicioSelect.addEventListener('change', calcularCotizacion);
+        }
+        if (frecuenciaSelect) {
+            frecuenciaSelect.addEventListener('change', calcularCotizacion);
+        }
+        if (tipoClienteSelect) {
+            tipoClienteSelect.addEventListener('change', calcularCotizacion);
         }
         setTimeout(calcularCotizacion, 100);
     }
 
-    // Alquiler
+    // 2. Alquiler
     if (currentPage === 'alquiler') {
         const diasInput = document.getElementById('dias');
         const tecnicoSelect = document.getElementById('con-tecnico');
+        const equipoSelect = document.getElementById('equipo-tipo');
         
         if (diasInput && tecnicoSelect) {
             diasInput.addEventListener('input', calcularAlquiler);
             tecnicoSelect.addEventListener('change', calcularAlquiler);
+            if (equipoSelect) equipoSelect.addEventListener('change', calcularAlquiler);
             calcularAlquiler();
+        }
+    }
+
+    // 3. Contacto (Envío Asíncrono AJAX para no salir de la SPA)
+    if (currentPage === 'contacto') {
+        const formContacto = document.querySelector('#contacto-main form');
+        if (formContacto) {
+            formContacto.addEventListener('submit', handleContactSubmit);
         }
     }
 }
 
-// Navegación entre páginas
-function navigateTo(page) {
-    if (routes[page]) {
-        currentPage = page;
+// Manejador del Formulario de Contacto vía AJAX (Formspree)
+async function handleContactSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Enviar Solicitud';
+    
+    // Contenedor de feedback
+    let feedbackDiv = document.getElementById('contacto-feedback');
+    if (!feedbackDiv) {
+        feedbackDiv = document.createElement('div');
+        feedbackDiv.id = 'contacto-feedback';
+        feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium transition duration-300';
+        form.appendChild(feedbackDiv);
+    }
+
+    // Estado enviando
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Enviando solicitud...';
+    }
+
+    try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium bg-green-100 text-green-800 border border-green-300';
+            feedbackDiv.innerHTML = '✅ <strong>¡Solicitud enviada con éxito!</strong> Nos comunicaremos con usted en menos de 24 horas.';
+            form.reset();
+        } else {
+            const data = await response.json();
+            feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-800 border border-red-300';
+            feedbackDiv.innerHTML = `⚠️ Hubo un inconveniente al enviar: ${data?.errors?.[0]?.message || 'Por favor intente nuevamente o contáctenos por WhatsApp.'}`;
+        }
+    } catch (error) {
+        feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-800 border border-red-300';
+        feedbackDiv.innerHTML = '⚠️ Error de conexión. Por favor contáctenos directamente al <a href="https://wa.me/18092323518" class="underline font-bold" target="_blank">WhatsApp (809) 232-3518</a>.';
+    } finally {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    }
+}
+
+// Navegación entre páginas con soporte de Hash / Deep-linking
+function navigateTo(page, updateHash = true) {
+    // Normalizar alias
+    const targetPage = (page === 'blog') ? 'nosotros' : page;
+
+    if (routes[targetPage]) {
+        currentPage = targetPage;
+        
+        // Actualizar URL sin recargar
+        if (updateHash && window.location.hash !== '#' + targetPage) {
+            window.location.hash = targetPage;
+        }
+
         renderApp();
     }
 }
@@ -50,6 +151,11 @@ function renderApp() {
     if (!appContainer) return;
     
     setActiveNav();
+
+    // Actualizar título dinámico para SEO y UX
+    if (pageTitles[currentPage]) {
+        document.title = pageTitles[currentPage];
+    }
 
     const contentHTML = routes[currentPage] ? routes[currentPage]() : generateHomePage();
     appContainer.innerHTML = contentHTML;
@@ -68,18 +174,25 @@ function setActiveNav() {
         link.classList.remove('bg-gray-200');
     });
 
-    // Establecer activo
-    const activeLink = document.getElementById('nav-' + currentPage);
+    // Establecer activo en barra de escritorio
+    const navId = (currentPage === 'blog' || currentPage === 'nosotros') ? 'nav-nosotros' : 'nav-' + currentPage;
+    const activeLink = document.getElementById(navId);
     if (activeLink) activeLink.classList.add('active');
     
+    // Establecer activo en menú móvil
     document.querySelectorAll('#mobile-menu a').forEach(link => {
-        const page = link.getAttribute('onclick').match(/navigateTo\('([^']+)'/);
-        if (page && page[1] === currentPage) {
+        const href = link.getAttribute('href') || '';
+        const onclickAttr = link.getAttribute('onclick') || '';
+        const isMatch = href === '#' + currentPage || 
+                        href === '#' + (currentPage === 'nosotros' ? 'blog' : '') ||
+                        onclickAttr.includes(`'${currentPage}'`) ||
+                        (currentPage === 'nosotros' && onclickAttr.includes("'blog'"));
+        if (isMatch) {
             link.classList.add('bg-gray-200');
         }
     });
     
-    // Cerrar menú móvil
+    // Cerrar menú móvil si está abierto
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
@@ -89,16 +202,36 @@ function setActiveNav() {
 // Inicialización de la aplicación
 window.onload = function() {
     // Menú móvil
-    document.getElementById('menu-button').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-    });
+    const menuBtn = document.getElementById('menu-button');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+    }
     
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.add('hidden');
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.add('hidden');
         });
     });
+
+    // Soporte para botón "Atrás" y "Adelante" del navegador
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#', '').trim();
+        if (hash && routes[hash] && hash !== currentPage) {
+            navigateTo(hash, false);
+        }
+    });
+
+    // Detección de ruta inicial por URL / Hash
+    const initialHash = window.location.hash.replace('#', '').trim();
+    if (initialHash && routes[initialHash]) {
+        currentPage = (initialHash === 'blog') ? 'nosotros' : initialHash;
+    } else {
+        currentPage = 'home';
+    }
 
     // Iniciar aplicación
     renderApp();

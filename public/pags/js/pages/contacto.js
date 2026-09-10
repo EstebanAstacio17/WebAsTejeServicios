@@ -63,7 +63,7 @@ function generateContactoPage() {
                             <div class="flex items-center">
                                 <input type="checkbox" id="privacidad" name="Acepta Política de Privacidad" required class="w-4 h-4 text-secondary-green border-gray-300 rounded focus:ring-secondary-green">
                                 <label for="privacidad" class="ml-2 text-sm text-gray-600">
-                                    Acepto la <a href="#" class="text-primary-blue hover:underline">Política de Privacidad</a> y el tratamiento de mis datos.
+                                    Acepto la <a href="pags/html/PP.html" target="_blank" rel="noopener noreferrer" class="text-primary-blue font-semibold hover:underline">Política de Privacidad</a> y el tratamiento de mis datos.
                                 </label>
                             </div>
 

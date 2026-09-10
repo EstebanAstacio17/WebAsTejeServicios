@@ -191,136 +191,97 @@ function generateBlogPage() {
 
 
 
-        <!-- 2. SECCIÓN BLOG 
-        <section class="py-16 sm:py-24 bg-bg-light border-t border-b fade-in" id="blog-content">
+        <!-- 2. SECCIÓN BLOG & RECURSOS TÉCNICOS -->
+        <section class="py-16 sm:py-24 bg-bg-light border-t border-b border-gray-200 fade-in" id="blog-content">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-primary-blue">Información y Tendencias del Sector</h2>
-                    <p class="mt-4 text-xl text-gray-600">Contenido experto para clientes que buscan soluciones y conocimiento.</p>
+                <div class="text-center mb-14">
+                    <span class="text-sm sm:text-base font-semibold text-secondary-green uppercase tracking-wider">Centro de Conocimiento & Cumplimiento</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-primary-blue mt-2">Normativas y Criterios Técnicos del Sector</h2>
+                    <p class="mt-3 text-lg text-gray-600 max-w-3xl mx-auto">Información especializada para directores de operaciones, administradores de proyectos y contratistas.</p>
                 </div>
 
-                 Artículos de Blog 
-
+                <!-- Artículos Técnicos -->
                 <div class="grid md:grid-cols-3 gap-8">
 
-                     Artículo 1: Termitas 
-                     
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/a8e063/1a3263?text=Termitas" alt="Control de Termitas" class="w-full h-48 object-cover">
+                    <!-- Artículo 1: Termitas -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between">
                         <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Especialización</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                Los 5 Errores Más Comunes en la Prevención de Termitas
+                            <span class="text-xs font-bold text-accent-orange uppercase tracking-wider">Tratamientos Estructurales</span>
+                            <h3 class="text-xl font-bold mt-2 text-primary-blue leading-snug">
+                                Prevención de Termitas en Proyectos de Construcción: Barreras Pre y Post Obra
                             </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Aprende por qué el tratamiento superficial no es suficiente para la protección a largo plazo de tu infraestructura...</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">15 Mar 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Por qué el tratamiento químico superficial resulta insuficiente y cómo las barreras físicas y químicas en cimientos garantizan la durabilidad estructural por años.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Protocolo Técnico</span>
+                            <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tratamientos%20antitermitas%20estructurales."
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-sm text-primary-blue font-bold hover:text-accent-orange transition">
+                                Consultar Asesoría →
+                            </a>
                         </div>
                     </div>
                     
-                     Artículo 2: Seguridad/Certificaciones 
-                     
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/1a3263/a8e063?text=Normativas" alt="Normativas de Fumigación" class="w-full h-48 object-cover">
+                    <!-- Artículo 2: Seguridad y Normativas Portuarias -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between">
                         <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Regulaciones</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                ¿Por qué su contrato con Naviera exige Certificación NPMA?
+                            <span class="text-xs font-bold text-primary-blue uppercase tracking-wider">Sector Marítimo & Logística</span>
+                            <h3 class="text-xl font-bold mt-2 text-primary-blue leading-snug">
+                                Cumplimiento Fitosanitario NIMF-15 en Puertos y Despacho de Contenedores
                             </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Entendiendo las normativas internacionales que regulan el control de plagas en zonas marítimas y portuarias.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">28 Feb 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Requisitos obligatorios de cuarentena y desinsectación en embalajes de madera para carga de exportación e importación, evitando detenciones aduanales.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Normativa Internacional</span>
+                            <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20deseo%20consultar%20sobre%20certificaciones%20fitosanitarias%20mar%C3%ADtimas."
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-sm text-primary-blue font-bold hover:text-accent-orange transition">
+                                Consultar Asesoría →
+                            </a>
                         </div>
                     </div>
 
-                     Artículo 3: Productos/Equipos 
-                    
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/ff7e5f/1a3263?text=EPP" alt="Suministros de Seguridad" class="w-full h-48 object-cover">
+                    <!-- Artículo 3: EPP y Bioseguridad -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between">
                         <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Suministros</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                Guía Completa de EPP para la Aplicación de Control de Plagas
+                            <span class="text-xs font-bold text-secondary-green uppercase tracking-wider">Salud Ocupacional</span>
+                            <h3 class="text-xl font-bold mt-2 text-primary-blue leading-snug">
+                                Protocolo de Bioseguridad y Equipos EPP en Ambientes Sensibles
                             </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Los insumos de seguridad que todo profesional debe tener para garantizar un trabajo seguro y conforme a la ley.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">12 Feb 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Criterios de protección en centros educativos, clínicas y complejos residenciales: selección de ingredientes no residuales y ventilación técnica segura.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Buenas Prácticas</span>
+                            <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20deseo%20informaci%C3%B3n%20sobre%20protocolos%20de%20bioseguridad%20para%20mi%20empresa."
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-sm text-primary-blue font-bold hover:text-accent-orange transition">
+                                Consultar Asesoría →
+                            </a>
                         </div>
                     </div>
 
-                     Artículo 4: Tendencias 
-                     
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/1a3263/ff7e5f?text=Tendencias" alt="Tendencias del Sector" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Innovación</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                Tecnología IoT en el Monitoreo de Plagas: El Futuro Ya Está Aquí
-                            </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Cómo los sensores inteligentes están revolucionando la detección temprana de infestaciones en grandes instalaciones.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">5 Feb 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                     Artículo 5: Caso de Éxito 
-                     
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/a8e063/1a3263?text=Caso+Exito" alt="Caso de Éxito" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Caso de Estudio</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                Control Integral en Terminal Portuaria: Un Caso de Éxito
-                            </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Análisis de nuestro programa de control de plagas implementado en uno de los puertos más importantes del país.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">22 Ene 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                     Artículo 6: Normativas 
-                     
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
-                        <img src="https://placehold.co/600x400/ff7e5f/1a3263?text=Legislacion" alt="Legislación Ambiental" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <span class="text-sm text-secondary-green font-semibold">Legislación</span>
-                            <h3 class="text-xl font-bold mt-2 text-primary-blue hover:text-secondary-green transition duration-300 cursor-pointer">
-                                Cambios en la Legislación Ambiental para Fumigación Comercial 2024
-                            </h3>
-                            <p class="mt-3 text-gray-600 text-sm">Actualización sobre las nuevas regulaciones que afectan a las empresas de control de plagas este año.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-500">15 Ene 2024</span>
-                                <a href="#" class="text-sm text-accent-orange font-semibold hover:underline focus-visible">Leer más →</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                
-                 CTA para suscripción al blog 
-                 
-                <div class="mt-16 bg-primary-blue p-8 rounded-2xl shadow-xl text-center text-white">
-                    <h3 class="text-2xl font-bold mb-4">¿Quiere mantenerse actualizado sobre control de plagas?</h3>
-                    <p class="mb-6">Suscríbase a nuestro boletín y reciba información técnica y normativas actualizadas.</p>
-                    <div class="max-w-md mx-auto flex">
-                        <input type="email" placeholder="Su correo electrónico" class="flex-grow p-3 rounded-l-lg text-gray-800 focus:outline-none focus-visible">
-                        <button class="bg-accent-orange text-primary-blue px-6 py-3 rounded-r-lg font-bold hover:bg-orange-500 transition duration-300 focus-visible">Suscribirse</button>
-                    </div>
-                    <p class="mt-3 text-sm text-gray-300">Puede darse de baja en cualquier momento. Respetamos su privacidad.</p>
+
+                <!-- CTA Institucional de Asesoramiento -->
+                <div class="mt-16 bg-primary-blue p-8 sm:p-10 rounded-2xl shadow-xl text-center text-white">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-3">¿Requiere capacitación o asesoramiento normativo para su equipo?</h3>
+                    <p class="mb-6 max-w-2xl mx-auto text-gray-300 text-sm sm:text-base">Brindamos acompañamiento a comités de seguridad industrial, auditores de calidad y administradores logísticos.</p>
+                    <a href="#contacto" onclick="navigateTo('contacto')"
+                       class="inline-block bg-accent-orange text-primary-blue py-3 px-8 rounded-xl font-bold text-base btn-primary hover:bg-orange-500 focus-visible shadow-md">
+                        Solicitar Sesión de Asesoramiento
+                    </a>
                 </div>
 
             </div>
         </section>
-        
-        -->
     `;
 }
