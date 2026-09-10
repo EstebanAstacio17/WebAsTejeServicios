@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pags/js/
+Disallow: /*?*
+
+Sitemap: https://astejeservicios.com/sitemap.xml
