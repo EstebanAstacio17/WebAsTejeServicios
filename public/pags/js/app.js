@@ -129,12 +129,16 @@ async function handleContactSubmit(e) {
             form.reset();
         } else {
             const data = await response.json();
+            const rawError = data?.errors?.[0]?.message || 'Por favor intente nuevamente o contáctenos por WhatsApp.';
+            const safeError = typeof sanitizeHTML === 'function' 
+                ? sanitizeHTML(rawError) 
+                : String(rawError).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
             feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-800 border border-red-300';
-            feedbackDiv.innerHTML = `⚠️ Hubo un inconveniente al enviar: ${data?.errors?.[0]?.message || 'Por favor intente nuevamente o contáctenos por WhatsApp.'}`;
+            feedbackDiv.innerHTML = `⚠️ Hubo un inconveniente al enviar: ${safeError}`;
         }
     } catch (error) {
         feedbackDiv.className = 'mt-4 p-4 rounded-xl text-center font-medium bg-red-100 text-red-800 border border-red-300';
-        feedbackDiv.innerHTML = '⚠️ Error de conexión. Por favor contáctenos directamente al <a href="https://wa.me/18092323518" class="underline font-bold" target="_blank">WhatsApp (809) 232-3518</a>.';
+        feedbackDiv.innerHTML = '⚠️ Error de conexión. Por favor contáctenos directamente al <a href="https://wa.me/18092323518" class="underline font-bold" target="_blank" rel="noopener noreferrer">WhatsApp (809) 232-3518</a>.';
     } finally {
         if (submitBtn) {
             submitBtn.disabled = false;
@@ -183,15 +187,21 @@ function renderApp() {
 function setActiveNav() {
     // Limpiar estados activos
     document.querySelectorAll('#desktop-nav .nav-link').forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove('active', 'bg-white', 'shadow-sm', 'text-[#0f1c3f]');
+        if (!link.classList.contains('bg-emerald-50') && !link.id.includes('certificados')) {
+            link.classList.add('text-slate-600');
+        }
     });
     document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.classList.remove('bg-gray-200');
+        link.classList.remove('bg-slate-200', 'font-bold');
     });
 
     // Establecer activo en barra de escritorio
     const activeLink = document.getElementById('nav-' + currentPage);
-    if (activeLink) activeLink.classList.add('active');
+    if (activeLink) {
+        activeLink.classList.add('active', 'bg-white', 'shadow-sm', 'text-[#0f1c3f]');
+        activeLink.classList.remove('text-slate-600');
+    }
     
     // Establecer activo en menú móvil
     document.querySelectorAll('#mobile-menu a').forEach(link => {
@@ -200,7 +210,7 @@ function setActiveNav() {
         const isMatch = href === '#' + currentPage || 
                         onclickAttr.includes(`'${currentPage}'`);
         if (isMatch) {
-            link.classList.add('bg-gray-200');
+            link.classList.add('bg-slate-200', 'font-bold');
         }
     });
     

@@ -47,13 +47,16 @@
                 theme: {
                     extend: {
                         colors: {
-                            'primary-blue': '#1b2e68',
-                            'primary-dark': '#111d42',
-                            'primary-light': '#253f8e',
-                            'secondary-green': '#a8e063',
-                            'accent-orange': '#ff7e5f',
-                            'text-dark': '#1e293b',
-                            'bg-light': '#f9f9f9',
+                            'primary-blue': '#102a71',
+                            'primary-dark': '#091738',
+                            'primary-light': '#164294',
+                            'brand-cyan': '#00a8cc',
+                            'brand-teal': '#028090',
+                            'brand-cyan-light': '#38bdf8',
+                            'secondary-green': '#22c55e',
+                            'eco-green': '#22c55e',
+                            'text-dark': '#0a1936',
+                            'bg-light': '#f8fafc',
                         },
                         fontFamily: {
                             sans: ['Inter', 'sans-serif'],
@@ -68,8 +71,8 @@
         {
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "Blog & Noticias de la Industria | AS-Teje Servicios",
-            "description": "Portal técnico especializado en control de plagas, tratamiento de termitas en cimentaciones, normativas NIMF-15 portuarias y bioseguridad en República Dominicana.",
+            "name": "Blog & Noticias de la Industria | AS Servicios",
+            "description": "Portal técnico especializado en control de plagas, tratamiento de termitas en cimentaciones, normativas NIMF-15 portuarias y bioseguridad en República Dominicana. Dejamos Huellas Ecológicas.",
             "publisher": {
                 "@type": "Organization",
                 "name": "AS-Teje Servicios SRL",
@@ -79,55 +82,66 @@
         </script>
     </head>
 
-    <body class="font-sans text-text-dark bg-bg-light">
+    <body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-[#00a8cc] selection:text-white">
         <!-- BARRA DE NAVEGACIÓN (Header) -->
-        <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
+                <div class="flex justify-between items-center h-20">
                     <!-- Logo y Nombre de la Empresa -->
-                    <a href="index.html#home" class="flex items-center text-xl sm:text-2xl font-bold text-primary-blue hover:text-secondary-green transition duration-300">
-                        <img src="imgs/Logo Sin Fondo.png" 
-                             onerror="this.onerror=null;this.src='imgs/Logo Sin Fondo.png';" 
-                             alt="Logo AS-Teje Servicios" 
-                             class="logo-as">AS-Teje Servicios
+                    <a href="index.html#home" class="flex items-center space-x-3 group focus-visible rounded-2xl p-1.5 transition">
+                        <div class="relative flex items-center justify-center">
+                            <img src="imgs/Logo Sin Fondo.png" 
+                                 onerror="this.onerror=null;this.src='imgs/Logo Sin Fondo.png';" 
+                                 alt="Logo AS Servicios" 
+                                 class="h-10 sm:h-11 w-auto transition transform group-hover:scale-105 duration-300 drop-shadow-sm">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-lg sm:text-xl font-extrabold text-[#102a71] tracking-tight group-hover:text-[#00a8cc] transition">
+                                AS SERVICIOS
+                            </span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-[#22c55e] -mt-1 hidden sm:flex items-center gap-1">
+                                <span>🌱</span> Dejamos Huellas Ecológicas
+                            </span>
+                        </div>
                     </a>
                     
                     <!-- Menú de Navegación de Escritorio -->
-                    <nav class="hidden lg:flex space-x-3 xl:space-x-5 items-center" id="desktop-nav">
-                        <a href="index.html#home" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Inicio</a>
-                        <a href="index.html#servicios" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Servicios</a>
-                        <a href="index.html#cotizador" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Cotizador</a>
-                        <a href="index.html#productos" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Productos</a>
-                        <a href="blog.html" id="nav-blog" class="nav-link text-primary-blue border-b-2 border-primary-blue font-bold transition duration-300 pb-2 text-sm">Blog & Noticias</a>
-                        <a href="index.html#nosotros" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Nosotros</a>
-                        <a href="index.html#certificados" class="nav-link text-primary-blue hover:text-accent-orange transition duration-300 font-bold pb-2 text-sm flex items-center gap-1 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
-                            <span class="text-xs">🛡️</span><span>Garantías</span>
+                    <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/70" id="desktop-nav">
+                        <a href="index.html#home" class="nav-link text-slate-600 hover:text-[#102a71] px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition duration-200">Inicio</a>
+                        <a href="index.html#nosotros" class="nav-link text-slate-600 hover:text-[#102a71] px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition duration-200">Nosotros</a>
+                        <a href="index.html#servicios" class="nav-link text-slate-600 hover:text-[#102a71] px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition duration-200">Servicios</a>
+                        <a href="blog.html" id="nav-blog" class="nav-link text-[#102a71] font-bold px-3.5 py-1.5 rounded-full text-xs xl:text-sm active">Blog & Noticias</a>
+                        <a href="index.html#cotizador" class="nav-link text-slate-600 hover:text-[#102a71] px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition duration-200">Cotizador</a>
+                        <a href="index.html#productos" class="nav-link text-slate-600 hover:text-[#102a71] px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition duration-200">Productos</a>
+                        <a href="index.html#certificados" class="nav-link text-[#102a71] hover:text-emerald-700 bg-white hover:bg-emerald-50 px-3 py-1.5 rounded-full text-xs xl:text-sm font-bold shadow-sm border border-slate-200/80 transition flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
+                            <span>Validar Garantías</span>
                         </a>
-                        <a href="index.html#contacto" class="text-primary-blue bg-secondary-green hover:bg-emerald-400 px-4 py-2 rounded-lg btn-primary text-sm shadow-md font-bold transition duration-300">Contacto</a>
                     </nav>
 
                     <!-- Botón Móvil (Hamburguesa) -->
-                    <button id="menu-button" class="lg:hidden text-gray-500 hover:text-primary-blue transition duration-300 p-2 rounded-md" aria-label="Abrir menú de navegación">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                            <path class="svg-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    <button id="menu-button" class="lg:hidden text-slate-700 hover:text-[#102a71] p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 transition" aria-label="Abrir menú de navegación">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
             </div>
             
             <!-- Menú Móvil Desplegable -->
-            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg border-t border-gray-100">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Inicio</a>
-                    <a href="index.html#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Servicios</a>
-                    <a href="index.html#cotizador" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Cotizador</a>
-                    <a href="index.html#productos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Venta de Productos</a>
-                    <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-blue-50">Blog & Noticias de la Industria</a>
-                    <a href="index.html#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Nosotros & Trayectoria</a>
-                    <a href="index.html#certificados" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-blue-50 hover:bg-blue-100 flex items-center gap-2">
-                        <span>🛡️</span><span>Validar Certificados de Garantía</span>
+            <div id="mobile-menu" class="hidden lg:hidden glass-nav border-t border-slate-200/70 py-4 px-4 shadow-2xl">
+                <div class="space-y-2">
+                    <a href="index.html#home" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition">Inicio</a>
+                    <a href="index.html#nosotros" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition">Nosotros & Trayectoria</a>
+                    <a href="index.html#servicios" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition">Servicios</a>
+                    <a href="blog.html" class="block px-4 py-3 rounded-xl text-base font-bold text-[#102a71] bg-cyan-50">Blog & Noticias</a>
+                    <a href="index.html#cotizador" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition">Cotizador</a>
+                    <a href="index.html#productos" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition">Venta de Productos</a>
+                    <a href="index.html#certificados" class="block px-4 py-3 rounded-xl text-base font-bold text-[#102a71] bg-emerald-50 border border-emerald-200/80 flex items-center justify-between">
+                        <span class="flex items-center gap-2"><span>🛡️</span> Validar Certificados</span>
+                        <span class="text-xs bg-[#22c55e] text-white px-2 py-0.5 rounded-full font-bold">Oficial</span>
                     </a>
-                    <a href="index.html#contacto" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-secondary-green hover:bg-emerald-400">Contacto</a>
+                    <a href="index.html#contacto" class="block text-center mt-3 btn-brand-cyan px-4 py-3.5 rounded-xl text-base font-bold shadow-lg">Contacto</a>
                 </div>
             </div>
         </header>
@@ -527,83 +541,82 @@
             </div>
         </main>
 
-        <!-- PIE DE PÁGINA -->
-        <footer class="bg-primary-blue text-white pt-12 pb-6">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-10">
+        <!-- PIE DE PÁGINA (Fiel a la Tarjeta de Negocios) -->
+        <footer class="bg-[#091738] text-slate-300 pt-16 pb-10 border-t border-slate-800 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-slate-800/80">
                     
                     <!-- Columna 1: Logo y Descripción -->
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <img src="imgs/Logo Sin Fondo.png" alt="Logo AS-Teje Servicios" class="h-10 w-auto bg-white rounded-lg p-1">
-                            <span class="text-xl font-bold tracking-tight">AS-Teje Servicios</span>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-2 text-2xl font-black text-white">
+                            <img src="imgs/Logo Sin Fonfo Blanco.png" onerror="this.onerror=null;this.src='imgs/Logo Sin Fondo.png';" alt="Logo AS Servicios" class="h-9 w-auto">
+                            <span>AS SERVICIOS</span>
                         </div>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                            Empresa líder en manejo integrado de plagas, fumigación portuaria NIMF-15, control de termitas en cimentaciones con garantía de 5, 10 a 15 años y facturación electrónica DGII en República Dominicana.
+                        <p class="text-xs font-bold uppercase tracking-wider text-[#22c55e]">
+                            🌱 Dejamos Huellas Ecológicas
                         </p>
-                        <div class="flex space-x-3">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-green text-primary-blue font-bold">
-                                Facturador e-CF DGII
-                            </span>
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-800 text-blue-200">
-                                Proveedor del Estado
-                            </span>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Servicios generales de prevención, control y exterminación de plagas, doméstico y comercial.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[11px] font-semibold bg-slate-800/90 text-[#22c55e] border border-slate-700/80 px-2.5 py-1 rounded-md">Lic. MSP #084</span>
+                            <span class="text-[11px] font-semibold bg-slate-800/90 text-[#38bdf8] border border-slate-700/80 px-2.5 py-1 rounded-md">CIPF NIMF-15</span>
+                            <span class="text-[11px] font-semibold bg-slate-800/90 text-[#00a8cc] border border-slate-700/80 px-2.5 py-1 rounded-md">DGII Facturador e-CF</span>
                         </div>
                     </div>
 
                     <!-- Columna 2: Servicios -->
                     <div>
-                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Servicios Especializados</h4>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Tratamiento de Zapatas (5 a 15 Años)</a></li>
-                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Fumigación Portuaria NIMF-15</a></li>
-                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Control de Termitas y Comején</a></li>
-                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Manejo Integrado de Plagas (MIP)</a></li>
-                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Desinfección de Naves Industriales</a></li>
+                        <h4 class="text-xs uppercase tracking-widest text-[#00a8cc] font-bold mb-4">Servicios Especializados</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li><a href="index.html#servicios" class="hover:text-[#22c55e] transition duration-300">Tratamiento de Zapatas (5 a 15 Años)</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-[#22c55e] transition duration-300">Fumigación Portuaria NIMF-15</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-[#22c55e] transition duration-300">Control de Termitas y Comején</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-[#22c55e] transition duration-300">Manejo Integrado de Plagas (MIP)</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-[#22c55e] transition duration-300">Desinfección de Naves Industriales</a></li>
                         </ul>
                     </div>
 
                     <!-- Columna 3: Enlaces Rápidos -->
                     <div>
-                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Enlaces Rápidos</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="index.html#home" class="text-gray-300 hover:text-accent-orange transition duration-300">Inicio</a></li>
-                            <li><a href="index.html#cotizador" class="text-gray-300 hover:text-accent-orange transition duration-300">Cotizador en Línea</a></li>
-                            <li><a href="index.html#productos" class="text-gray-300 hover:text-accent-orange transition duration-300">Venta de Productos</a></li>
-                            <li><a href="blog.html" class="text-secondary-green font-bold hover:text-accent-orange transition duration-300">Blog & Noticias de la Industria</a></li>
-                            <li><a href="index.html#nosotros" class="text-gray-300 hover:text-accent-orange transition duration-300">Nosotros & Trayectoria</a></li>
-                            <li><a href="index.html#certificados" class="text-gray-300 hover:text-accent-orange transition duration-300 font-bold flex items-center gap-1"><span>🛡️</span><span>Validar Certificados</span></a></li>
-                            <li><a href="index.html#contacto" class="text-gray-300 hover:text-accent-orange transition duration-300">Contacto Directo</a></li>
+                        <h4 class="text-xs uppercase tracking-widest text-[#00a8cc] font-bold mb-4">Enlaces Rápidos</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li><a href="index.html#home" class="hover:text-[#00a8cc] transition duration-300">Inicio</a></li>
+                            <li><a href="index.html#nosotros" class="hover:text-[#00a8cc] transition duration-300">Nosotros & Trayectoria</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-[#00a8cc] transition duration-300">Servicios B2B</a></li>
+                            <li><a href="blog.html" class="text-[#22c55e] font-bold hover:text-[#00a8cc] transition duration-300">Blog & Noticias de la Industria</a></li>
+                            <li><a href="index.html#cotizador" class="hover:text-[#00a8cc] transition duration-300">Cotizador en Línea</a></li>
+                            <li><a href="index.html#productos" class="hover:text-[#00a8cc] transition duration-300">Venta de Productos</a></li>
+                            <li><a href="index.html#certificados" class="hover:text-[#22c55e] transition duration-300 font-bold flex items-center gap-1"><span>🛡️</span><span>Validar Certificados</span></a></li>
                         </ul>
                     </div>
 
                     <!-- Columna 4: Contacto -->
                     <div>
-                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Atención Inmediata</h4>
+                        <h4 class="text-xs uppercase tracking-widest text-[#00a8cc] font-bold mb-4">Contacto Directo</h4>
                         <ul class="space-y-3 text-sm">
                             <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent-orange mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
-                                <a href="https://maps.app.goo.gl/9wK1FJ3jBrNsmjCk6" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent-orange transition duration-300">
-                                    Aut. Duarte, Km. 13, Distrito Nacional, Rep. Dom.
+                                <span class="text-[#00a8cc] mr-2.5 mt-0.5">📍</span>
+                                <a href="https://maps.app.goo.gl/9wK1FJ3jBrNsmjCk6" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-[#00a8cc] transition text-xs leading-relaxed">
+                                    Autopista Duarte Km. 13, Los Peralejos, Santo Domingo, Distrito Nacional.
                                 </a>
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-5 h-5 text-accent-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
-                                <a href="https://wa.me/18092323518" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent-orange transition duration-300">
+                                <span class="text-[#25D366] mr-2.5">📞</span>
+                                <a href="https://wa.me/18092323518" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-[#25D366] font-bold transition">
                                     (809) 232-3518
                                 </a>
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-5 h-5 text-accent-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-8 13h9a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                                </svg>
-                                <a href="mailto:contacto@astejeservicios.com" class="text-gray-300 hover:text-accent-orange transition duration-300">
+                                <span class="text-[#38bdf8] mr-2.5">✉️</span>
+                                <a href="mailto:contacto@astejeservicios.com" class="text-slate-300 hover:text-[#38bdf8] transition text-xs">
                                     contacto@astejeservicios.com
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-[#00a8cc] mr-2.5">🌐</span>
+                                <a href="https://www.astejeservicios.com" class="text-slate-300 hover:text-[#00a8cc] transition text-xs font-semibold">
+                                    www.astejeservicios.com
                                 </a>
                             </li>
                         </ul>
@@ -612,12 +625,13 @@
                 </div>
 
                 <!-- Derechos de Autor -->
-                <div class="mt-6 text-center text-sm text-gray-400">
-                    <p>&copy; 2025 AS-Teje Servicios SRL. Todos los derechos reservados. | 
-                        <a target="_blank" href="pags/html/PP.html" class="hover:text-secondary-green transition duration-300">Política de Privacidad</a> | 
-                        <a target="_blank" href="pags/html/TCS.html" class="hover:text-secondary-green transition duration-300">Términos del Servicio</a>
-                    </p>
-                    <p class="mt-1 text-gray-500 text-xs">Diseñado y elaborado por PortaForza</p>
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                    <p>&copy; 2026 AS Servicios (AS-Teje Servicios SRL). RNC: 1-32-47891-3. Todos los derechos reservados.</p>
+                    <div class="flex items-center space-x-4">
+                        <a target="_blank" rel="noopener noreferrer" href="pags/html/PP.html" class="hover:text-[#00a8cc] transition">Política de Privacidad</a>
+                        <span>•</span>
+                        <a target="_blank" rel="noopener noreferrer" href="pags/html/TCS.html" class="hover:text-[#00a8cc] transition">Términos del Servicio</a>
+                    </div>
                 </div>
             </div>
         </footer>
