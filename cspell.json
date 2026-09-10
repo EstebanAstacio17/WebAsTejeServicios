@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "language": "es,en",
+  "import": [
+    "@cspell/dict-es-es/cspell-ext.json"
+  ],
+  "words": [
+    "astejeservicios",
+    "PortaForza",
+    "formspree",
+    "DGCP",
+    "DGII",
+    "NIMF",
+    "ISPM",
+    "NPMA",
+    "motomochila",
+    "termonebulizador",
+    "cebaderas",
+    "cebadera",
+    "desinsectación",
+    "fitosanitarias",
+    "fitosanitario",
+    "elastoméricos",
+    "parafinado",
+    "rodenticidas",
+    "tyvek",
+    "intermodal",
+    "prefiltrado",
+    "posicionamiento",
+    "microgotas",
+    "autocompletion",
+    "Viton",
+    "jfortuna",
+    "camulogistics",
+    "conday",
+    "funjemar",
+    "montessorimanaen",
+    "Facturador"
+  ]
+}
