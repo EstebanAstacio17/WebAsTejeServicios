@@ -53,7 +53,7 @@
 
         <link rel="manifest" href="site.webmanifest">
 
-        <meta name="theme-color" content="#1a3263">
+        <meta name="theme-color" content="#1b2e68">
         
         <!-- Preconexión y precarga de recursos críticos -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -79,10 +79,12 @@
                 theme: {
                     extend: {
                         colors: {
-                            'primary-blue': '#1a3263',
+                            'primary-blue': '#1b2e68',
+                            'primary-dark': '#111d42',
+                            'primary-light': '#253f8e',
                             'secondary-green': '#a8e063',
                             'accent-orange': '#ff7e5f',
-                            'text-dark': '#333333',
+                            'text-dark': '#1e293b',
                             'bg-light': '#f9f9f9',
                         },
                         fontFamily: {
@@ -153,13 +155,14 @@
                         class="logo-as">AS-Teje Servicios</a>
                     
                     <!-- Menú de Navegación de Escritorio -->
-                    <nav class="hidden lg:flex space-x-4 xl:space-x-6" id="desktop-nav">
+                    <nav class="hidden lg:flex space-x-3 xl:space-x-5 items-center" id="desktop-nav">
                         <a href="#home" onclick="navigateTo('home')" id="nav-home" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Inicio</a>
                         <a href="#servicios" onclick="navigateTo('servicios')" id="nav-servicios" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Servicios</a>
                         <a href="#cotizador" onclick="navigateTo('cotizador')" id="nav-cotizador" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Cotizador</a>
                         <a href="#productos" onclick="navigateTo('productos')" id="nav-productos" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Productos</a>
-                        <a href="#alquiler" onclick="navigateTo('alquiler')" id="nav-alquiler" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Alquiler</a>
+                        <a href="#blog" onclick="navigateTo('blog')" id="nav-blog" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Blog & Noticias</a>
                         <a href="#nosotros" onclick="navigateTo('nosotros')" id="nav-nosotros" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Nosotros</a>
+                        <a href="#certificados" onclick="navigateTo('certificados')" id="nav-certificados" class="nav-link text-primary-blue hover:text-accent-orange transition duration-300 font-bold pb-2 text-sm flex items-center gap-1 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100"><span class="text-xs">🛡️</span><span>Garantías</span></a>
                         <a href="#contacto" onclick="navigateTo('contacto')" id="nav-contacto" class="text-primary-blue bg-secondary-green hover:bg-emerald-400 px-4 py-2 rounded-lg btn-primary text-sm shadow-md font-bold transition duration-300">Contacto</a>
                     </nav>
 
@@ -179,8 +182,9 @@
                     <a href="#servicios" onclick="navigateTo('servicios')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Servicios</a>
                     <a href="#cotizador" onclick="navigateTo('cotizador')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Cotizador</a>
                     <a href="#productos" onclick="navigateTo('productos')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Venta de Productos</a>
-                    <a href="#alquiler" onclick="navigateTo('alquiler')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Alquiler de Equipos</a>
+                    <a href="#blog" onclick="navigateTo('blog')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Blog & Noticias de la Industria</a>
                     <a href="#nosotros" onclick="navigateTo('nosotros')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Nosotros & Trayectoria</a>
+                    <a href="#certificados" onclick="navigateTo('certificados')" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-blue-50 hover:bg-blue-100 flex items-center gap-2"><span>🛡️</span><span>Validar Certificados de Garantía</span></a>
                     <a href="#contacto" onclick="navigateTo('contacto')" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-secondary-green hover:bg-emerald-400">Contacto</a>
                 </div>
             </div>
@@ -197,7 +201,7 @@
                     <!-- Columna 1: Logo y Descripción -->
                     <div>
                         <a href="#" onclick="navigateTo('home')" class="flex items-center text-2xl font-bold text-white hover:text-secondary-green transition duration-300 mb-4">
-                            <img src="imgs/Logo Sin Fonfo Blanco.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ffffff/1a3263?text=AS';" alt="Logo AS-Teje Servicios" class="h-10 w-auto mr-1">
+                            <img src="imgs/Logo Sin Fonfo Blanco.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ffffff/1b2e68?text=AS';" alt="Logo AS-Teje Servicios" class="h-10 w-auto mr-1">
                             - Teje Servicios
                         </a>
                         <p class="text-sm text-gray-300">
@@ -249,6 +253,7 @@
                             <li><a href="#home" onclick="navigateTo('home')" class="text-gray-300 footer-link">Inicio</a></li>
                             <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link">Nuestros Servicios</a></li>
                             <li><a href="#cotizador" onclick="navigateTo('cotizador')" class="text-gray-300 footer-link">Cotizador en Línea</a></li>
+                            <li><a href="#certificados" onclick="navigateTo('certificados')" class="text-emerald-300 hover:text-white font-semibold footer-link flex items-center gap-1"><span>🛡️</span> Validar Garantías</a></li>
                             <li><a href="#nosotros" onclick="navigateTo('nosotros')" class="text-gray-300 footer-link">Nosotros & Trayectoria</a></li>
                             <li><a href="#contacto" onclick="navigateTo('contacto')" class="text-gray-300 footer-link">Contacto Directo</a></li>
                         </ul>
@@ -259,10 +264,10 @@
                         <h4 class="text-lg font-bold text-secondary-green mb-4 border-b border-gray-700 pb-2">Servicios Clave</h4>
                         <ul class="space-y-3 text-sm">
                             <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link ">Control Comercial</a></li>
-                            <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link ">Protección Anti-Termitas</a></li>
-                            <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link ">Fumigación Marítima</a></li>
+                            <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link ">Protección Anti-Termitas & Zapatas</a></li>
+                            <li><a href="#servicios" onclick="navigateTo('servicios')" class="text-gray-300 footer-link ">Fumigación Marítima NIMF-15</a></li>
                             <li><a href="#productos" onclick="navigateTo('productos')" class="text-gray-300 footer-link ">Venta de Suministros</a></li>
-                            <li><a href="#alquiler" onclick="navigateTo('alquiler')" class="text-gray-300 footer-link">Alquiler de Equipos</a></li>
+                            <li><a href="#blog" onclick="navigateTo('blog')" class="text-gray-300 footer-link">Blog & Noticias de la Industria</a></li>
                         </ul>
                     </div>
 
@@ -338,8 +343,9 @@
         <script src="pags/js/pages/servicios.js"></script>
         <script src="pags/js/pages/cotizador.js"></script>
         <script src="pags/js/pages/productos.js"></script>
-        <script src="pags/js/pages/alquiler.js"></script>
+        <script src="pags/js/pages/nosotros.js"></script>
         <script src="pags/js/pages/blog.js"></script>
+        <script src="pags/js/pages/certificados.js"></script>
         <script src="pags/js/pages/contacto.js"></script>
         <script src="pags/js/app.js"></script>
     </body>

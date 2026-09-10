@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Metadatos básicos -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Metadatos SEO -->
+        <title>Blog & Noticias de la Industria | AS-Teje Servicios</title>
+        <meta name="description" content="Portal técnico y de actualidad sobre control de plagas, fumigación de zapatas con garantía de 5 a 15 años, normativa NIMF-15 en puertos y facturación electrónica DGII en República Dominicana.">
+        <meta name="keywords" content="blog control de plagas, tratamiento termitas zapatas, garantia 15 anos comejen, nimf-15 puertos dominicana, fumigacion haina caucedo, e-cf plagas rd">
+        
+        <!-- Metadatos técnicos y de posicionamiento -->
+        <meta name="robots" content="index, follow, max-image-preview:large">
+        <meta name="author" content="PortaForza">
+        <meta name="copyright" content="© 2025 AS-Teje Servicios SRL. Todos los derechos reservados.">
+
+        <!-- Open Graph / Redes Sociales -->
+        <meta property="og:title" content="Blog & Noticias de la Industria | AS-Teje Servicios">
+        <meta property="og:description" content="Artículos técnicos, normativas fitosanitarias NIMF-15, tratamiento de suelos en zapatas con garantía de 5, 10 a 15 años y facturación electrónica DGII.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://astejeservicios.com/blog.html">
+        <meta property="og:image" content="https://astejeservicios.com/img/og-image.jpg">
+        <meta property="og:site_name" content="AS-Teje Servicios">
+        <meta property="og:locale" content="es_DO">
+
+        <!-- Favicon y App Icons -->
+        <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="imgs/favicon-48x48.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+        <link rel="manifest" href="site.webmanifest">
+        <meta name="theme-color" content="#1b2e68">
+        
+        <!-- Preconexión de fuentes y estilos -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="canonical" href="https://astejeservicios.com/blog.html">
+
+        <!-- Carga de Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-blue': '#1b2e68',
+                            'primary-dark': '#111d42',
+                            'primary-light': '#253f8e',
+                            'secondary-green': '#a8e063',
+                            'accent-orange': '#ff7e5f',
+                            'text-dark': '#1e293b',
+                            'bg-light': '#f9f9f9',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                        },
+                    }
+                }
+            }
+        </script>
+
+        <!-- Schema.org markup para Google -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Blog & Noticias de la Industria | AS-Teje Servicios",
+            "description": "Portal técnico especializado en control de plagas, tratamiento de termitas en cimentaciones, normativas NIMF-15 portuarias y bioseguridad en República Dominicana.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AS-Teje Servicios SRL",
+                "url": "https://astejeservicios.com"
+            }
+        }
+        </script>
+    </head>
+
+    <body class="font-sans text-text-dark bg-bg-light">
+        <!-- BARRA DE NAVEGACIÓN (Header) -->
+        <header class="sticky top-0 z-50 bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo y Nombre de la Empresa -->
+                    <a href="index.html#home" class="flex items-center text-xl sm:text-2xl font-bold text-primary-blue hover:text-secondary-green transition duration-300">
+                        <img src="imgs/Logo Sin Fondo.png" 
+                             onerror="this.onerror=null;this.src='imgs/Logo Sin Fondo.png';" 
+                             alt="Logo AS-Teje Servicios" 
+                             class="logo-as">AS-Teje Servicios
+                    </a>
+                    
+                    <!-- Menú de Navegación de Escritorio -->
+                    <nav class="hidden lg:flex space-x-3 xl:space-x-5 items-center" id="desktop-nav">
+                        <a href="index.html#home" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Inicio</a>
+                        <a href="index.html#servicios" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Servicios</a>
+                        <a href="index.html#cotizador" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Cotizador</a>
+                        <a href="index.html#productos" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Productos</a>
+                        <a href="blog.html" id="nav-blog" class="nav-link text-primary-blue border-b-2 border-primary-blue font-bold transition duration-300 pb-2 text-sm">Blog & Noticias</a>
+                        <a href="index.html#nosotros" class="nav-link text-gray-600 hover:text-primary-blue transition duration-300 font-medium pb-2 text-sm">Nosotros</a>
+                        <a href="index.html#certificados" class="nav-link text-primary-blue hover:text-accent-orange transition duration-300 font-bold pb-2 text-sm flex items-center gap-1 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100">
+                            <span class="text-xs">🛡️</span><span>Garantías</span>
+                        </a>
+                        <a href="index.html#contacto" class="text-primary-blue bg-secondary-green hover:bg-emerald-400 px-4 py-2 rounded-lg btn-primary text-sm shadow-md font-bold transition duration-300">Contacto</a>
+                    </nav>
+
+                    <!-- Botón Móvil (Hamburguesa) -->
+                    <button id="menu-button" class="lg:hidden text-gray-500 hover:text-primary-blue transition duration-300 p-2 rounded-md" aria-label="Abrir menú de navegación">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                            <path class="svg-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg border-t border-gray-100">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Inicio</a>
+                    <a href="index.html#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Servicios</a>
+                    <a href="index.html#cotizador" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Cotizador</a>
+                    <a href="index.html#productos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Venta de Productos</a>
+                    <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-blue-50">Blog & Noticias de la Industria</a>
+                    <a href="index.html#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Nosotros & Trayectoria</a>
+                    <a href="index.html#certificados" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-blue-50 hover:bg-blue-100 flex items-center gap-2">
+                        <span>🛡️</span><span>Validar Certificados de Garantía</span>
+                    </a>
+                    <a href="index.html#contacto" class="block px-3 py-2 rounded-md text-base font-bold text-primary-blue bg-secondary-green hover:bg-emerald-400">Contacto</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENEDOR PRINCIPAL: BLOG & NOTICIAS -->
+        <main class="min-h-screen py-16 sm:py-24 bg-bg-light fade-in" id="blog-main">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Encabezado del Blog -->
+                <div class="text-center mb-14">
+                    <div class="inline-flex items-center space-x-2 bg-blue-100 text-primary-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                        <span>Actualidad • Normativas Oficiales • Criterios Técnicos</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-primary-blue mt-1">
+                        Blog & Noticias de la Industria
+                    </h1>
+                    <p class="mt-4 text-base sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Análisis técnico, regulaciones fitosanitarias internacionales, normativas fiscales y buenas prácticas en bioseguridad para directores de operaciones, contratistas, fiduciarias y empresas en República Dominicana.
+                    </p>
+
+                    <!-- Filtros de Categorías Rápidas -->
+                    <div class="flex flex-wrap justify-center gap-2 mt-8" id="blog-filters">
+                        <button onclick="filterBlogCategory('all')" id="filter-all" class="blog-filter-btn bg-primary-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-sm cursor-pointer transition">
+                            Todas las Publicaciones
+                        </button>
+                        <button onclick="filterBlogCategory('construccion')" id="filter-construccion" class="blog-filter-btn bg-white text-gray-700 hover:text-primary-blue hover:bg-blue-50 border border-gray-200 text-xs font-semibold px-4 py-2 rounded-full transition cursor-pointer">
+                            Construcción, Zapatas & Termitas
+                        </button>
+                        <button onclick="filterBlogCategory('portuario')" id="filter-portuario" class="blog-filter-btn bg-white text-gray-700 hover:text-primary-blue hover:bg-blue-50 border border-gray-200 text-xs font-semibold px-4 py-2 rounded-full transition cursor-pointer">
+                            Sector Portuario & NIMF-15
+                        </button>
+                        <button onclick="filterBlogCategory('fiscal')" id="filter-fiscal" class="blog-filter-btn bg-white text-gray-700 hover:text-primary-blue hover:bg-blue-50 border border-gray-200 text-xs font-semibold px-4 py-2 rounded-full transition cursor-pointer">
+                            Normativa Fiscal DGII (e-CF)
+                        </button>
+                        <button onclick="filterBlogCategory('mip')" id="filter-mip" class="blog-filter-btn bg-white text-gray-700 hover:text-primary-blue hover:bg-blue-50 border border-gray-200 text-xs font-semibold px-4 py-2 rounded-full transition cursor-pointer">
+                            Manejo Integrado MIP & BPM
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NOTA TÉCNICA DESTACADA: TRATAMIENTO PREVIO EN ZAPATAS Y SUELOS (5, 10 A 15 AÑOS) -->
+                <section class="mb-16 bg-white rounded-3xl shadow-xl border-2 border-accent-orange/40 overflow-hidden" id="nota-tecnica-zapatas">
+                    <div class="bg-gradient-to-r from-primary-blue via-blue-900 to-primary-blue text-white px-6 sm:px-10 py-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xl">🏗️</span>
+                            <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-accent-orange">
+                                Boletín Técnico Especial: Ingeniería Civil & Prevención Estructural
+                            </span>
+                        </div>
+                        <span class="text-xs bg-accent-orange/20 text-orange-200 border border-orange-300/30 px-3 py-1 rounded-full font-bold">
+                            Garantías Certificadas: 5, 10 a 15 Años
+                        </span>
+                    </div>
+
+                    <div class="p-6 sm:p-12">
+                        <div class="max-w-4xl">
+                            <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                                <span>Criterio Técnico Indispensable en Obra Negra</span>
+                            </div>
+
+                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary-blue leading-tight mb-4">
+                                La Importancia del Tratamiento Previo de Suelos en Zapatas: Cómo Prevenir Termitas y Comejenes una vez Concluida la Construcción
+                            </h2>
+                            
+                            <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+                                En el ecosistema tropical de la República Dominicana, las <strong>termitas subterráneas (<em>Coptotermes gestroi</em>)</strong> y los <strong>comejenes</strong> habitan de manera endémica en el subsuelo. Una vez concluida la obra civil y habitada la edificación, estos xilófagos aprovechan microfisuras del hormigón, juntas frías de dilatación y pasos de tuberías hidrosanitarias o eléctricas para penetrar silenciosamente, devorando marcos de puertas, closets, vigas de madera, plafones y paneles de yeso (drywall).
+                            </p>
+
+                            <!-- Comparativa en 3 Pasos -->
+                            <div class="grid md:grid-cols-3 gap-6 my-8">
+                                <div class="bg-bg-light p-6 rounded-2xl border border-gray-200 hover:border-accent-orange/50 transition">
+                                    <div class="text-accent-orange text-2xl font-black mb-1">01. El Problema</div>
+                                    <h3 class="font-bold text-primary-blue text-sm mb-2">Tratamientos Reactivos Invasivos</h3>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        Perforar losas de porcelanato, romper zócalos e inyectar muros cuando la plaga ya está adentro resulta hasta un <strong>400% más costoso</strong> y causa daños estéticos irreversibles a la terminación.
+                                    </p>
+                                </div>
+
+                                <div class="bg-bg-light p-6 rounded-2xl border border-gray-200 hover:border-secondary-green transition">
+                                    <div class="text-secondary-green text-2xl font-black mb-1">02. La Solución Técnica</div>
+                                    <h3 class="font-bold text-primary-blue text-sm mb-2">Barrera Química Pre-Vaciado</h3>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        Saturación uniforme a alta presión en zapatas, plateas, dados de columna y terreno compactado antes del vaciado de hormigón. Forma un escudo químico continuo e infranqueable.
+                                    </p>
+                                </div>
+
+                                <div class="bg-bg-light p-6 rounded-2xl border border-gray-200 hover:border-primary-blue transition">
+                                    <div class="text-primary-blue text-2xl font-black mb-1">03. Respaldo AS-Teje</div>
+                                    <h3 class="font-bold text-primary-blue text-sm mb-2">Garantía de 5, 10 a 15 Años</h3>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        Póliza certificada por escrito con código de validación digital auditable ante fiduciarias, bancos y compradores, respaldada por un <strong>programa de seguimiento continuo</strong>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Bloque Institucional -->
+                            <div class="bg-blue-50 border-l-4 border-primary-blue p-6 rounded-r-2xl mb-8">
+                                <h3 class="text-base font-bold text-primary-blue mb-2 flex items-center gap-2">
+                                    <span>🛡️</span>
+                                    <span>Ejecución Profesional y Garantía Extendida AS-Teje Servicios</span>
+                                </h3>
+                                <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3">
+                                    En <strong>AS-Teje Servicios SRL</strong> contamos con el equipamiento de alta presión, termiticidas no repelentes de fijación molecular (con registro del Ministerio de Salud Pública) y personal calificado para intervenir obras civiles en cualquier etapa de cimentación.
+                                </p>
+                                <ul class="grid sm:grid-cols-2 gap-2 text-xs sm:text-sm text-gray-800 font-medium">
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-emerald-600 font-bold">✔</span>
+                                        <span>Garantía por escrito de <strong>5, 10 y hasta 15 Años</strong>.</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-emerald-600 font-bold">✔</span>
+                                        <span><strong>Seguimiento continuo:</strong> revisiones periódicas programadas.</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-emerald-600 font-bold">✔</span>
+                                        <span>Certificados auditables para fiduciarias y aseguradoras.</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-emerald-600 font-bold">✔</span>
+                                        <span>Facturación electrónica DGII con crédito fiscal B01.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Especificaciones de Aplicación -->
+                            <div class="border-t border-gray-200 pt-6">
+                                <h4 class="text-sm font-extrabold uppercase tracking-wider text-primary-blue mb-4">
+                                    Protocolo Técnico de Aplicación en Zapatas:
+                                </h4>
+                                <ol class="space-y-3 text-xs sm:text-sm text-gray-600 list-decimal list-inside">
+                                    <li><strong>Tratamiento de Fondo y Paredes de Excavación:</strong> Inyección a razón de 4 a 5 litros de emulsión termiticida por metro lineal en zapatas corridas y aisladas antes de la colocación de armaduras de acero.</li>
+                                    <li><strong>Barrera Horizontal en Suelo Compactado:</strong> Aspersión de cobertura total previa a la colocación del polietileno (vapor barrier) y vaciado de la losa de piso.</li>
+                                    <li><strong>Tratamiento Perimetral Crítico:</strong> Empastado químico perimetral exterior y sellado en puntos de penetración de tuberías de desagüe y acometidas eléctricas.</li>
+                                </ol>
+                            </div>
+
+                            <!-- Botones de Acción -->
+                            <div class="mt-8 flex flex-wrap items-center gap-4">
+                                <a href="index.html#cotizador"
+                                   class="bg-accent-orange hover:bg-orange-600 text-primary-blue font-bold px-6 py-3 rounded-xl text-sm transition duration-300 shadow-md flex items-center space-x-2">
+                                    <span>Calcular Metraje en Cotizador</span>
+                                    <span>→</span>
+                                </a>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20asesor%C3%ADa%20t%C3%A9cnica%20para%20tratamiento%20de%20zapatas%20pre-vaciado%20en%20obra%20civil."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition duration-300 shadow-md flex items-center space-x-2">
+                                    <span>Consultar con Ingeniero Técnico vía WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- GRID DE NOTICIAS DE LA INDUSTRIA -->
+                <div>
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-primary-blue">
+                                Artículos & Noticias Especializadas
+                            </h2>
+                            <p class="text-gray-500 text-xs sm:text-sm mt-1">
+                                Criterios técnicos de referencia para puertos, almacenes, zonas francas e industrias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+                        
+                        <!-- Noticia 1: Portuario NIMF-15 -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="portuario">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-primary-blue bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Sector Portuario
+                                    </span>
+                                    <time datetime="2026-02-15" class="text-xs text-gray-400 font-medium">Feb 2026</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Normativa NIMF-15 en Terminales Dominicanas: Exigencias en Madera de Exportación
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    Análisis de los protocolos de cuarentena fitosanitaria para tarimas y embalajes de madera con destino a EE.UU. y Europa desde DP World Caucedo y Río Haina.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#NIMF15</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#PuertosRD</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Comercio Exterior</span>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20informaci%C3%B3n%20sobre%20certificaci%C3%B3n%20NIMF-15%20portuaria."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Consultar</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Noticia 2: Construcción & Termitas en Zapatas -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="construccion">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-accent-orange bg-orange-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Construcción & Obras
+                                    </span>
+                                    <time datetime="2026-01-18" class="text-xs text-gray-400 font-medium">Ene 2026</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Garantías de 5, 10 a 15 Años en Tratamiento de Suelo en Zapatas
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    Especificaciones técnicas sobre la saturación química de suelo pre-vaciado. Estructuración de coberturas por escrito con seguimiento continuo e inspecciones periódicas de campo.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#Zapatas</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#GarantiaExtendida</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Ingeniería</span>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20informaci%C3%B3n%20sobre%20la%20garant%C3%ADa%20de%205,%2010%20a%2015%20a%C3%B1os%20en%20tratamiento%20de%20suelos%20pre-vaciado."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Consultar</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Noticia 3: Facturación Electrónica DGII (Ley 32-23) -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="fiscal">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-secondary-green bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Tributario & DGII
+                                    </span>
+                                    <time datetime="2025-12-10" class="text-xs text-gray-400 font-medium">2025–2026</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Ley 32-23 de Facturación Electrónica: e-CF en Fumigación Corporativa
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    El calendario obligatorio exige a empresas en zonas francas y constructoras contratar proveedores autorizados con e-CF (B01/E31) para asegurar la total deducibilidad de gastos.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#eCF</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#DGII</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Formalidad</span>
+                                <a href="index.html#contacto"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Verificar RNC</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Noticia 4: Rotación de Moléculas en MIP & Almacenes -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mip">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-primary-blue bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Inocuidad & Alimentos
+                                    </span>
+                                    <time datetime="2025-11-20" class="text-xs text-gray-400 font-medium">Nov 2025</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Rotación de Familias Químicas para Evitar Resistencia en MIP
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    Estrategias avanzadas de rotación entre neonicotinoides, piretroides y reguladores de crecimiento (IGR) para mantener la eficacia sin generar tolerancia en plagas urbanas.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#MIP</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#HACCP</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Auditoría BPM</span>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20informaci%C3%B3n%20sobre%20programas%20MIP%20para%20auditor%C3%ADas%20BPM/HACCP."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Consultar</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Noticia 5: Control de Roedores en Centros Logísticos -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mip">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-primary-blue bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Logística & Almacenes
+                                    </span>
+                                    <time datetime="2025-10-05" class="text-xs text-gray-400 font-medium">Oct 2025</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Cordones Sanitarios y Estaciones Cebaderas Inviolables
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    Mapeo y georreferenciación de estaciones cebaderas perimetrales en naves industriales, garantizando cero contaminación cruzada y cumplimiento ante inspectores de salud.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#Desratizacion</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#ZonasFrancas</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Bioseguridad</span>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20propuesta%20de%20control%20de%20roedores%20para%20nave%20industrial."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Consultar</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Noticia 6: Plagas en Oficinas y Planteles -->
+                        <article class="blog-card bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="mip">
+                            <div class="p-7">
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="text-xs font-extrabold text-primary-blue bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                        Corporativo & Escolar
+                                    </span>
+                                    <time datetime="2025-09-12" class="text-xs text-gray-400 font-medium">Sep 2025</time>
+                                </div>
+                                <h3 class="text-lg sm:text-xl font-bold text-primary-blue leading-snug">
+                                    Fumigación Nocturna e Inodora: Cero Interrupción Laboral
+                                </h3>
+                                <p class="mt-3 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    Protocolos de nebulización ULV de ultra bajo volumen fuera de horario hábil. Fórmulas botánicas y microencapsuladas seguras para entornos con personal y equipos electrónicos.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-1.5 text-xs text-gray-500 font-medium">
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#Inodoro</span>
+                                    <span class="bg-gray-100 px-2 py-0.5 rounded">#ContinuidadOperativa</span>
+                                </div>
+                            </div>
+                            <div class="p-7 pt-0 border-t border-gray-100 mt-4 flex items-center justify-between">
+                                <span class="text-xs text-gray-500 font-bold">Salud Ocupacional</span>
+                                <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20solicito%20informaci%C3%B3n%20sobre%20tratamientos%20corporativos%20inodoros."
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-xs text-primary-blue font-bold hover:text-accent-orange transition flex items-center gap-1">
+                                    <span>Consultar</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Banner Auxiliar: Consulta de Certificados de Garantía -->
+                <div class="mt-14 bg-gradient-to-r from-blue-900 to-primary-blue p-8 sm:p-10 rounded-3xl shadow-xl text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <div class="flex items-center space-x-2 text-secondary-green text-sm font-bold uppercase tracking-wider mb-2">
+                            <span>🛡️ Consulta Oficial en Línea</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                            ¿Tiene una Garantía Emitida y Desea Validarla?
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base mt-1 max-w-xl">
+                            Consulte el código de folio de su certificado para comprobar vigencia, técnico fitosanitario asignado y registro de Salud Pública.
+                        </p>
+                    </div>
+                    <a href="index.html#certificados" 
+                       class="whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-xl text-sm sm:text-base btn-primary transition duration-300 shadow-lg flex items-center space-x-2">
+                        <span>Validar Folio en Línea</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <!-- CTA Institucional de Asesoramiento Normativo -->
+                <div class="mt-12 bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-sm text-center">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-primary-blue mb-3">
+                        ¿Requiere una charla técnica o asesoría normativa para su equipo?
+                    </h3>
+                    <p class="mb-6 max-w-2xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Acompañamos a comités de seguridad industrial, auditores de calidad y contratistas en el cumplimiento de normas sanitarias, fiscales y portuarias.
+                    </p>
+                    <a href="index.html#contacto"
+                       class="inline-block bg-accent-orange text-primary-blue py-3.5 px-8 rounded-xl font-bold text-base btn-primary hover:bg-orange-500 focus-visible shadow-md">
+                        Solicitar Asesoría Técnica
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="bg-primary-blue text-white pt-12 pb-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-10">
+                    
+                    <!-- Columna 1: Logo y Descripción -->
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="imgs/Logo Sin Fondo.png" alt="Logo AS-Teje Servicios" class="h-10 w-auto bg-white rounded-lg p-1">
+                            <span class="text-xl font-bold tracking-tight">AS-Teje Servicios</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Empresa líder en manejo integrado de plagas, fumigación portuaria NIMF-15, control de termitas en cimentaciones con garantía de 5, 10 a 15 años y facturación electrónica DGII en República Dominicana.
+                        </p>
+                        <div class="flex space-x-3">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-green text-primary-blue font-bold">
+                                Facturador e-CF DGII
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-800 text-blue-200">
+                                Proveedor del Estado
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Servicios -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Servicios Especializados</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Tratamiento de Zapatas (5 a 15 Años)</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Fumigación Portuaria NIMF-15</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Control de Termitas y Comején</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Manejo Integrado de Plagas (MIP)</a></li>
+                            <li><a href="index.html#servicios" class="hover:text-accent-orange transition duration-300">Desinfección de Naves Industriales</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Enlaces Rápidos -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Enlaces Rápidos</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="index.html#home" class="text-gray-300 hover:text-accent-orange transition duration-300">Inicio</a></li>
+                            <li><a href="index.html#cotizador" class="text-gray-300 hover:text-accent-orange transition duration-300">Cotizador en Línea</a></li>
+                            <li><a href="index.html#productos" class="text-gray-300 hover:text-accent-orange transition duration-300">Venta de Productos</a></li>
+                            <li><a href="blog.html" class="text-secondary-green font-bold hover:text-accent-orange transition duration-300">Blog & Noticias de la Industria</a></li>
+                            <li><a href="index.html#nosotros" class="text-gray-300 hover:text-accent-orange transition duration-300">Nosotros & Trayectoria</a></li>
+                            <li><a href="index.html#certificados" class="text-gray-300 hover:text-accent-orange transition duration-300 font-bold flex items-center gap-1"><span>🛡️</span><span>Validar Certificados</span></a></li>
+                            <li><a href="index.html#contacto" class="text-gray-300 hover:text-accent-orange transition duration-300">Contacto Directo</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 4: Contacto -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 text-secondary-green">Atención Inmediata</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-orange mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <a href="https://maps.app.goo.gl/9wK1FJ3jBrNsmjCk6" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent-orange transition duration-300">
+                                    Aut. Duarte, Km. 13, Distrito Nacional, Rep. Dom.
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                <a href="https://wa.me/18092323518" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent-orange transition duration-300">
+                                    (809) 232-3518
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent-orange mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-8 13h9a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                                <a href="mailto:contacto@astejeservicios.com" class="text-gray-300 hover:text-accent-orange transition duration-300">
+                                    contacto@astejeservicios.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Derechos de Autor -->
+                <div class="mt-6 text-center text-sm text-gray-400">
+                    <p>&copy; 2025 AS-Teje Servicios SRL. Todos los derechos reservados. | 
+                        <a target="_blank" href="pags/html/PP.html" class="hover:text-secondary-green transition duration-300">Política de Privacidad</a> | 
+                        <a target="_blank" href="pags/html/TCS.html" class="hover:text-secondary-green transition duration-300">Términos del Servicio</a>
+                    </p>
+                    <p class="mt-1 text-gray-500 text-xs">Diseñado y elaborado por PortaForza</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- BOTÓN FLOTANTE DE WHATSAPP / EMERGENCIAS 24/7 -->
+        <aside aria-label="Contacto Rápido" class="fixed bottom-6 right-6 z-50 flex items-center space-x-2 group">
+            <a href="https://wa.me/18092323518?text=Hola%20AS-Teje%20Servicios,%20le%C3%AD%20su%20blog%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Atención y Emergencias vía WhatsApp"
+               class="bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl flex items-center transition-all duration-300 transform hover:scale-105 pulse-glow focus-visible">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0003 2.00008C6.48008 2.00008 2.00008 6.48008 2.00008 12.0003C2.00008 14.1803 2.69908 16.2003 3.93908 17.8403L2.57108 22.0803L7.00008 20.6693C8.59908 21.6003 10.2801 22.0003 12.0003 22.0003C17.5203 22.0003 22.0003 17.5203 22.0003 12.0003C22.0003 6.48008 17.5203 2.00008 12.0003 2.00008ZM16.5003 15.6003C16.3003 15.9603 14.3703 16.9403 14.0703 17.0603C13.7703 17.1803 13.5603 17.1803 13.3503 17.0603C13.1403 16.9403 12.4403 16.7103 11.5803 16.1903C10.7203 15.6703 10.0903 14.9903 9.61031 14.3003C9.13031 13.6103 8.75031 12.8703 8.64031 12.6003C8.53031 12.3303 7.84031 11.8503 7.84031 11.8503L7.84031 11.8503C7.63031 11.5803 7.84031 11.3703 8.05031 11.1603C8.26031 10.9503 8.48031 10.7403 8.69031 10.4703C8.90031 10.2003 9.00031 10.0203 9.11031 9.8103C9.22031 9.6003 9.51031 9.2703 9.77031 9.0603C10.0303 8.8503 10.2403 8.8603 10.4503 9.0703C10.6603 9.2803 10.7703 9.5203 11.0203 10.0403C11.2703 10.5603 11.3803 10.6803 11.5803 10.9203C11.7803 11.1603 11.8803 11.4003 11.7703 11.6403C11.6603 11.8803 11.4503 12.0003 11.2303 12.1203C11.0103 12.2403 10.8003 12.3703 10.5903 12.5503C10.3803 12.7303 10.0603 12.9803 9.87031 13.1703C9.68031 13.3603 9.48031 13.5603 9.39031 13.7503C9.30031 13.9403 9.43031 14.2303 9.58031 14.4903C9.73031 14.7503 9.89031 14.9903 10.1503 15.2203C10.4103 15.4503 10.6603 15.6803 10.8703 15.8203C11.0803 15.9603 11.3503 16.0903 11.6003 16.2003C11.8503 16.3103 12.0603 16.3303 12.1703 16.3303C12.4203 16.3303 12.6203 16.3103 13.1603 16.0803C13.6903 15.8503 14.7703 15.3003 14.9803 15.0603C15.1903 14.8203 15.3903 14.7303 15.5403 14.7303C15.6903 14.7303 16.3503 15.0303 16.5003 15.2403C16.6503 15.4503 16.6503 15.4503 16.5003 15.6003Z"/>
+                </svg>
+                <span class="hidden sm:inline font-bold ml-2 text-sm tracking-wide">¿Emergencia o Cotización?</span>
+            </a>
+        </aside>
+
+        <!-- Scripts interactivos de la página de Blog -->
+        <script>
+            // Toggle menú móvil
+            const menuBtn = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Filtrado dinámico por categoría
+            function filterBlogCategory(cat) {
+                const articles = document.querySelectorAll('.blog-card');
+                const featured = document.getElementById('nota-tecnica-zapatas');
+                const buttons = document.querySelectorAll('.blog-filter-btn');
+
+                buttons.forEach(btn => {
+                    btn.classList.remove('bg-primary-blue', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+
+                const activeBtn = document.getElementById('filter-' + cat);
+                if (activeBtn) {
+                    activeBtn.classList.remove('bg-white', 'text-gray-700');
+                    activeBtn.classList.add('bg-primary-blue', 'text-white');
+                }
+
+                if (cat === 'all') {
+                    articles.forEach(a => a.style.display = '');
+                    if (featured) featured.style.display = '';
+                } else {
+                    if (featured) {
+                        featured.style.display = (cat === 'construccion') ? '' : 'none';
+                    }
+                    articles.forEach(a => {
+                        const articleCat = a.getAttribute('data-category');
+                        if (articleCat === cat) {
+                            a.style.display = '';
+                        } else {
+                            a.style.display = 'none';
+                        }
+                    });
+                    if (cat === 'construccion' && featured) {
+                        featured.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
+

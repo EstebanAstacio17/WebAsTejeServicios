@@ -1,27 +1,29 @@
 // Estado global de la aplicación
 let currentPage = 'home';
 
-// Configuración de rutas (soporta alias 'nosotros' y 'blog')
+// Configuración de rutas (blog sustituye alquiler, nosotros independiente)
 const routes = {
     'home': generateHomePage,
     'servicios': generateServiciosPage,
     'cotizador': generateCotizadorPage,
     'productos': generateProductosPage,
-    'alquiler': generateAlquilerPage,
-    'nosotros': generateBlogPage,
     'blog': generateBlogPage,
+    'alquiler': generateBlogPage, // Alias de compatibilidad hacia Blog & Noticias
+    'nosotros': generateNosotrosPage,
+    'certificados': generateCertificadosPage,
     'contacto': generateContactoPage
 };
 
 // Títulos SEO dinámicos por sección
 const pageTitles = {
     'home': 'AS-Teje Servicios | Control de Plagas Especializado',
-    'servicios': 'Servicios Especializados | AS-Teje Servicios',
+    'servicios': 'Servicios Especializados B2B | AS-Teje Servicios',
     'cotizador': 'Cotizador en Línea V2.0 | AS-Teje Servicios',
     'productos': 'Venta de Productos e Insumos Industriales | AS-Teje Servicios',
-    'alquiler': 'Renta de Equipos de Fumigación | AS-Teje Servicios',
+    'blog': 'Blog & Noticias de la Industria | AS-Teje Servicios',
+    'alquiler': 'Blog & Noticias de la Industria | AS-Teje Servicios',
     'nosotros': 'Nosotros, Trayectoria y Respaldo Institucional | AS-Teje Servicios',
-    'blog': 'Nosotros, Trayectoria y Respaldo Institucional | AS-Teje Servicios',
+    'certificados': 'Consulta y Validación de Certificados de Garantía | AS-Teje Servicios',
     'contacto': 'Contacto Directo y Emergencias | AS-Teje Servicios'
 };
 
@@ -53,19 +55,6 @@ function attachDynamicEvents() {
         setTimeout(calcularCotizacion, 100);
     }
 
-    // 2. Alquiler
-    if (currentPage === 'alquiler') {
-        const diasInput = document.getElementById('dias');
-        const tecnicoSelect = document.getElementById('con-tecnico');
-        const equipoSelect = document.getElementById('equipo-tipo');
-        
-        if (diasInput && tecnicoSelect) {
-            diasInput.addEventListener('input', calcularAlquiler);
-            tecnicoSelect.addEventListener('change', calcularAlquiler);
-            if (equipoSelect) equipoSelect.addEventListener('change', calcularAlquiler);
-            calcularAlquiler();
-        }
-    }
 
     // 3. Contacto (Envío Asíncrono AJAX para no salir de la SPA)
     if (currentPage === 'contacto') {
@@ -74,6 +63,32 @@ function attachDynamicEvents() {
             formContacto.addEventListener('submit', handleContactSubmit);
         }
     }
+
+    // 4. Consulta de Certificados de Garantía
+    if (currentPage === 'certificados') {
+        const certForm = document.getElementById('cert-search-form');
+        if (certForm) {
+            certForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                buscarCertificado();
+            });
+        }
+        if (window._pendingCertQuery) {
+            const queryToRun = window._pendingCertQuery;
+            window._pendingCertQuery = null;
+            setTimeout(() => {
+                const input = document.getElementById('cert-query');
+                if (input) input.value = queryToRun;
+                buscarCertificado(queryToRun);
+            }, 60);
+        }
+    }
+}
+
+// Función puente para consultar certificado desde la página de inicio u otras secciones
+function consultarCertificadoDesdeHome(codigo) {
+    window._pendingCertQuery = codigo;
+    navigateTo('certificados');
 }
 
 // Manejador del Formulario de Contacto vía AJAX (Formspree)
@@ -130,8 +145,8 @@ async function handleContactSubmit(e) {
 
 // Navegación entre páginas con soporte de Hash / Deep-linking
 function navigateTo(page, updateHash = true) {
-    // Normalizar alias
-    const targetPage = (page === 'blog') ? 'nosotros' : page;
+    // Normalizar alias: alquiler redirige al nuevo blog de la industria
+    const targetPage = (page === 'alquiler') ? 'blog' : page;
 
     if (routes[targetPage]) {
         currentPage = targetPage;
@@ -175,8 +190,7 @@ function setActiveNav() {
     });
 
     // Establecer activo en barra de escritorio
-    const navId = (currentPage === 'blog' || currentPage === 'nosotros') ? 'nav-nosotros' : 'nav-' + currentPage;
-    const activeLink = document.getElementById(navId);
+    const activeLink = document.getElementById('nav-' + currentPage);
     if (activeLink) activeLink.classList.add('active');
     
     // Establecer activo en menú móvil
@@ -184,9 +198,7 @@ function setActiveNav() {
         const href = link.getAttribute('href') || '';
         const onclickAttr = link.getAttribute('onclick') || '';
         const isMatch = href === '#' + currentPage || 
-                        href === '#' + (currentPage === 'nosotros' ? 'blog' : '') ||
-                        onclickAttr.includes(`'${currentPage}'`) ||
-                        (currentPage === 'nosotros' && onclickAttr.includes("'blog'"));
+                        onclickAttr.includes(`'${currentPage}'`);
         if (isMatch) {
             link.classList.add('bg-gray-200');
         }
@@ -228,7 +240,7 @@ window.onload = function() {
     // Detección de ruta inicial por URL / Hash
     const initialHash = window.location.hash.replace('#', '').trim();
     if (initialHash && routes[initialHash]) {
-        currentPage = (initialHash === 'blog') ? 'nosotros' : initialHash;
+        currentPage = (initialHash === 'alquiler') ? 'blog' : initialHash;
     } else {
         currentPage = 'home';
     }
